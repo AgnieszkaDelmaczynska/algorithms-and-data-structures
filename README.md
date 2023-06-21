@@ -15,4 +15,5 @@ Some of the topics covered:
 
 - Project1: efficiently storing files on pendrives,
 - Project2: XOR linked list,
-- Project3: list-based FIFO queue.
+- Project3: list-based FIFO queue,
+- Project4: B-trees.
