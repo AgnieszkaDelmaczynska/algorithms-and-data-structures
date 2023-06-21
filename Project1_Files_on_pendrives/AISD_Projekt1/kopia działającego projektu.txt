@@ -1,0 +1,157 @@
+#include <iostream>
+#include <stdio.h>
+#include <cmath>
+#define NUMBER_OF_PARAMETERS 2
+using namespace std;
+
+void zamien(int* a, int* b)                           // Funkcja do zamiany pozycji elementów (wskaźników)
+{                          
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+int podziel_2D(int** tab, int indeks_najnizszy, int indeks_najwyzszy)      // Funkcja podziału tablicy na podstawie elementu przestawnego (pivot_element)
+{
+    int i = (indeks_najnizszy - 1);
+    int pivot_element = tab[indeks_najwyzszy][1];                                       //tab[indeks_najwyzszy][0] by było po id
+    for (int j = indeks_najnizszy; j < indeks_najwyzszy; j++)
+    {
+        if (tab[j][1] <= pivot_element)                                     //tab[j][0] by było po id
+        {
+            i++;
+            zamien(&tab[i][0], &tab[j][0]);
+            zamien(&tab[i][1], &tab[j][1]);
+        }
+    }
+    zamien(&tab[i + 1][0], &tab[indeks_najwyzszy][0]);
+    zamien(&tab[i + 1][1], &tab[indeks_najwyzszy][1]);
+    return (i + 1);
+}
+
+void quick_sort_2D(int** tab, int indeks_najnizszy, int indeks_najwyzszy) 
+{
+    if (indeks_najnizszy < indeks_najwyzszy) 
+    {
+        int pivot_element = podziel_2D(tab, indeks_najnizszy, indeks_najwyzszy);
+        quick_sort_2D(tab, pivot_element + 1, indeks_najwyzszy);
+        quick_sort_2D(tab, indeks_najnizszy, pivot_element - 1);
+    }
+}
+
+int podziel_1D(int* tab, int indeks_najnizszy, int indeks_najwyzszy) 
+{
+    int i = (indeks_najnizszy - 1);
+    int pivot_element = tab[indeks_najwyzszy];
+    for (int j = indeks_najnizszy; j < indeks_najwyzszy; j++) 
+    {
+        if (tab[j] >= pivot_element) 
+        {
+            i++;
+            zamien(&tab[i], &tab[j]);
+        }
+    }
+    zamien(&tab[i + 1], &tab[indeks_najwyzszy]);
+    return (i + 1);
+}
+void quick_sort_1D(int* tab, int indeks_najnizszy, int indeks_najwyzszy) 
+{
+    if (indeks_najnizszy < indeks_najwyzszy) 
+    {
+        int pivot_element = podziel_1D(tab, indeks_najnizszy, indeks_najwyzszy);
+        quick_sort_1D(tab, pivot_element + 1, indeks_najwyzszy);
+        quick_sort_1D(tab, indeks_najnizszy, pivot_element - 1);
+    }
+}
+int main() 
+{
+    int liczba_plikow, rozmiar_pendrajwow;
+    scanf_s("%d", &liczba_plikow);
+    scanf_s("%d", &rozmiar_pendrajwow);
+
+    int** tablica_plikow = new int* [liczba_plikow];	        //ile wierszy
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        tablica_plikow[i] = new int[NUMBER_OF_PARAMETERS];		//ile kolumn, NUMBER_OF_PARAMETERS = 2
+    }
+
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        int id_pliku, rozmiar_pliku;        
+        scanf_s("%d", &id_pliku);
+        tablica_plikow[i][0] = id_pliku;      
+        scanf_s("%d", &rozmiar_pliku);
+        tablica_plikow[i][1] = rozmiar_pliku;      
+    }
+    printf("\n");
+    quick_sort_2D(tablica_plikow, 0, liczba_plikow - 1);
+
+    int ile_w_pendrive_1 = 0;
+    int suma_w_pendrive_1 = 0;
+    int id_ostatniego_zmieszczonego_pliku_w_1 = 0;         // [x][1]
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        if ((tablica_plikow[i][1] + suma_w_pendrive_1) <= rozmiar_pendrajwow)
+        {
+            suma_w_pendrive_1 += tablica_plikow[i][1];
+            id_ostatniego_zmieszczonego_pliku_w_1 = i;
+            ile_w_pendrive_1++;
+        }          
+    }
+    //printf("Suma plikow w pendrive 1: %d \n", ile_w_pendrive_1);
+    //printf("Suma rozmiarow plikow w pendrive 1: %d \n", suma_w_pendrive_1);
+    //printf("Indeks ostatniego zmieszczonego pliku w 1: %d \n\n", id_ostatniego_zmieszczonego_pliku_w_1);
+
+    int ile_w_pendrive_2 = 0;
+    int suma_w_pendrive_2 = 0;
+    int id_ostatniego_zmieszczonego_pliku_w_2 = 0;          // [x][1]
+    for (int i = (id_ostatniego_zmieszczonego_pliku_w_1 + 1); i < liczba_plikow; i++)
+    {
+        if ((tablica_plikow[i][1] + suma_w_pendrive_2) <= rozmiar_pendrajwow)
+        {
+            suma_w_pendrive_2 += tablica_plikow[i][1];
+            id_ostatniego_zmieszczonego_pliku_w_2 = i;
+            ile_w_pendrive_2++;
+        }
+    }
+    //printf("Suma plikow w pendrive 2: %d \n", ile_w_pendrive_2);
+    //printf("Suma rozmiarow plikow w pendrive 2: %d \n", suma_w_pendrive_2);
+    //printf("Indeks ostatniego zmieszczonego pliku w 2: %d \n\n", id_ostatniego_zmieszczonego_pliku_w_2);
+
+    int przekopiowano_plikow;
+    przekopiowano_plikow = ile_w_pendrive_1 + ile_w_pendrive_2;
+    cout << przekopiowano_plikow << endl;
+
+    int* pendrive_1 = new int [ile_w_pendrive_1];
+    for (int i = 0; i < ile_w_pendrive_1; i++)
+    {
+        pendrive_1[i]=tablica_plikow[i][0];
+    }
+    quick_sort_1D(pendrive_1, 0, ile_w_pendrive_1-1);
+
+    int* pendrive_2 = new int[ile_w_pendrive_2];
+    int licznik = 0;
+    for (int i = (id_ostatniego_zmieszczonego_pliku_w_1 + 1); i < id_ostatniego_zmieszczonego_pliku_w_2+1; i++)
+    {
+        pendrive_2[licznik] = tablica_plikow[i][0];
+        licznik++;
+    }
+    quick_sort_1D(pendrive_2, 0, ile_w_pendrive_2-1);
+
+    printf("1: ");
+    for (int i = 0; i < ile_w_pendrive_1; i++)
+    {
+        printf("%d ", pendrive_1[i]);
+    }
+    printf("\n");
+    printf("2: ");
+    for (int i = 0; i < ile_w_pendrive_2; i++)
+    {       
+        printf("%d ", pendrive_2[i]);
+    }
+    for (int i = 0; i < liczba_plikow; i++)
+        delete tablica_plikow[i];
+    delete[] tablica_plikow;
+    delete[]pendrive_1;
+    delete[]pendrive_2;
+    return 0;
+}

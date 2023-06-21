@@ -1,0 +1,147 @@
+#include <stdio.h>
+#include <iostream>
+#define LICZBA_PARAMETROW 2
+using namespace std;
+
+// Funkcja do zamiany pozycji elementów (wskaźników)
+void swap(int* a, int* b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+// Funkcja podziału tablicy na podstawie elementu przestawnego (pivot)
+int partition2D(int** array, int low, int high) {
+    int pivot = array[high][1];                                         //array[high][0] by było po id
+    int i = (low - 1);
+
+    for (int j = low; j < high; j++) {
+        if (array[j][1] <= pivot) {                                     //array[j][1] by było po id
+            i++;
+            swap(&array[i][0], &array[j][0]);
+            swap(&array[i][1], &array[j][1]);
+        }
+    }
+    swap(&array[i + 1][0], &array[high][0]);
+    swap(&array[i + 1][1], &array[high][1]);
+    return (i + 1);
+}
+
+void quickSort2D(int** array, int low, int high) {
+    if (low < high) {
+        int pivot = partition2D(array, low, high);
+        quickSort2D(array, low, pivot - 1);
+        quickSort2D(array, pivot + 1, high);
+    }
+}
+
+int partition1D(int* array, int low, int high) {
+    int pivot = array[high];
+    int i = (low - 1);
+    for (int j = low; j < high; j++) {
+        if (array[j] >= pivot) {
+            i++;
+            swap(&array[i], &array[j]);
+        }
+    }
+    swap(&array[i + 1], &array[high]);
+    return (i + 1);
+}
+void quickSort1D(int* array, int low, int high) {
+    if (low < high) {
+        int pivot = partition1D(array, low, high);
+        quickSort1D(array, low, pivot - 1);
+        quickSort1D(array, pivot + 1, high);
+    }
+}
+int main() {
+    int liczba_plikow, rozmiar_pendrajwow;
+    scanf_s("%d", &liczba_plikow);
+    scanf_s("%d", &rozmiar_pendrajwow);
+
+    int** tablica_plikow = new int* [liczba_plikow];	    //ile wierszy
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        tablica_plikow[i] = new int[LICZBA_PARAMETROW];		//ile kolumn, LICZBA_PARAMETROW = 2
+    }
+
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        int id_pliku, rozmiar_pliku;        
+        scanf_s("%d", &id_pliku);                           //cin >> id_pliku;
+        tablica_plikow[i][0] = id_pliku;      
+        scanf_s("%d", &rozmiar_pliku);                      //cin >> rozmiar_pliku;
+        tablica_plikow[i][1] = rozmiar_pliku;      
+    }
+    printf("\n");
+    quickSort2D(tablica_plikow, 0, liczba_plikow - 1);
+
+    int ile_w_pendrive_1 = 0;
+    int suma_w_pendrive_1 = 0;
+    int id_ostatniego_zmieszczonego_pliku_w_1 = 0;         // [x][1]
+    for (int i = 0; i < liczba_plikow; i++)
+    {
+        if ((tablica_plikow[i][1] + suma_w_pendrive_1) <= rozmiar_pendrajwow)
+        {
+            suma_w_pendrive_1 += tablica_plikow[i][1];
+            id_ostatniego_zmieszczonego_pliku_w_1 = i;
+            ile_w_pendrive_1++;
+        }          
+    }
+    //printf("Suma plikow w pendrive 1: %d \n", ile_w_pendrive_1);
+    //printf("Suma rozmiarow plikow w pendrive 1: %d \n", suma_w_pendrive_1);
+    //printf("Indeks ostatniego zmieszczonego pliku w 1: %d \n\n", id_ostatniego_zmieszczonego_pliku_w_1);
+
+    int ile_w_pendrive_2 = 0;
+    int suma_w_pendrive_2 = 0;
+    int id_ostatniego_zmieszczonego_pliku_w_2 = 0;          // [x][1]
+    for (int i = (id_ostatniego_zmieszczonego_pliku_w_1 + 1); i < liczba_plikow; i++)
+    {
+        if ((tablica_plikow[i][1] + suma_w_pendrive_2) <= rozmiar_pendrajwow)
+        {
+            suma_w_pendrive_2 += tablica_plikow[i][1];
+            id_ostatniego_zmieszczonego_pliku_w_2 = i;
+            ile_w_pendrive_2++;
+        }
+    }
+    //printf("Suma plikow w pendrive 2: %d \n", ile_w_pendrive_2);
+    //printf("Suma rozmiarow plikow w pendrive 2: %d \n", suma_w_pendrive_2);
+    //printf("Indeks ostatniego zmieszczonego pliku w 2: %d \n\n", id_ostatniego_zmieszczonego_pliku_w_2);
+
+    int przekopiowano_plikow;
+    przekopiowano_plikow = ile_w_pendrive_1 + ile_w_pendrive_2;
+    cout << przekopiowano_plikow << endl;
+
+    int* pendrive_1 = new int [ile_w_pendrive_1];
+    for (int i = 0; i < ile_w_pendrive_1; i++)
+    {
+        pendrive_1[i]=tablica_plikow[i][0];
+    }
+    quickSort1D(pendrive_1, 0, ile_w_pendrive_1-1);
+
+    int* pendrive_2 = new int[ile_w_pendrive_2];
+    int licznik = 0;
+    for (int i = (id_ostatniego_zmieszczonego_pliku_w_1 + 1); i < id_ostatniego_zmieszczonego_pliku_w_2+1; i++)
+    {
+        pendrive_2[licznik] = tablica_plikow[i][0];
+        licznik++;
+    }
+    quickSort1D(pendrive_2, 0, ile_w_pendrive_2-1);
+
+    printf("1: ");
+    for (int i = 0; i < ile_w_pendrive_1; i++)
+    {
+        printf("%d ", pendrive_1[i]);
+    }
+    printf("\n");
+    printf("2: ");
+    for (int i = 0; i < ile_w_pendrive_2; i++)
+    {       
+        printf("%d ", pendrive_2[i]);
+    }
+    for (int i = 0; i < liczba_plikow; i++)
+        delete tablica_plikow[i];
+    delete[] tablica_plikow;
+    delete[]pendrive_1;
+    delete[]pendrive_2;
+    return 0;
+}
