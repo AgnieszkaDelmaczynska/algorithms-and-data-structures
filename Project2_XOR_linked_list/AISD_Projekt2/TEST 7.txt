@@ -1,0 +1,75 @@
+ADD_END 1
+ADD_END 2
+ADD_BEG 3
+ADD_ACT 4
+NEXT
+PREV
+ACTUAL
+PREV
+DEL_BEG
+DEL_BEG
+DEL_BEG
+DEL_BEG
+///////////////////////////////////////////////DZIAŁA
+ADD_END 1
+ADD_END 2
+ADD_BEG 3
+ADD_ACT 4
+PREV
+ACTUAL
+NEXT
+NEXT
+DEL_END
+DEL_END
+DEL_END
+DEL_END
+//////////////////////////////////////////////DZIAŁA
+ADD_END 1
+ADD_END 2
+ADD_BEG 3
+ADD_ACT 4
+ACTUAL
+PREV
+NEXT
+NEXT
+DEL_ACT
+DEL_ACT
+DEL_ACT
+DEL_ACT
+///////////////////////////////////////DZIAŁA
+ADD_END 1
+ADD_END 2
+ADD_BEG 3
+ADD_ACT 4
+ACTUAL
+NEXT
+NEXT
+NEXT
+DEL_VAL 1
+DEL_VAL 3
+DEL_VAL 2
+DEL_VAL 4
+///////////////////////////////////// DZIAŁA
+ADD_END 1
+ADD_END 2
+ADD_BEG 3
+ADD_ACT 4
+ACTUAL
+PREV
+PREV
+PREV
+//////////////////////////////////// DZIAŁA
+
+//Node* temp_next_next = XOR(NULL, next->npx);
+            Node* temp_prev_prev = XOR(NULL, prev->npx);
+            prev = XOR(prev->npx, current);
+            current = temp2;
+            current->npx = XOR(prev, NULL);
+            //next->npx = XOR(NULL, temp_next_next);
+            prev->npx = XOR(NULL, temp_prev_prev);
+
+            Node* temp_prev_prev = XOR(current, prev->npx);//OK
+            next = beginning->npx;
+            current = end;
+            prev->npx = XOR(NULL, temp_prev_prev);
+            end = prev;

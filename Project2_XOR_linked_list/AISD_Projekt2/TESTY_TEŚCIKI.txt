@@ -1,0 +1,120 @@
+printf("\nnext != prev\n");
+                    printf("end->value %d\n", end->value);
+                    printf("beginning->value %d\n", beginning->value);
+                    printf("beginning->npx %d\n", beginning->npx);
+                    printf("current->value %d\n", current->value);
+                    printf("next->value %d\n", next->value);
+                    printf("next->npx %d\n", next->npx);
+                    printf("prev->value %d\n", prev->value);
+///////////////////////////////////////////////////////////////////////////////////////// ADD_ACT (x)
+// current przedostatnie
+ADD_BEG 1
+ADD_END 2
+ADD_BEG 3
+ADD_BEG 4
+PRINT_FORWARD
+ACTUAL
+ADD_ACT 5
+PRINT_FORWARD
+
+//current ostatnie
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_BEG 4
+PRINT_FORWARD
+ACTUAL
+ADD_ACT 5
+PRINT_FORWARD
+
+//current pierwsze
+ADD_END 1
+ADD_END 2
+ADD_END 3
+ADD_END 4
+PRINT_FORWARD
+ACTUAL
+ADD_ACT 5
+PRINT_FORWARD
+
+//current drugie
+ADD_BEG 1
+ADD_BEG 2
+ADD_END 3
+ADD_END 4
+PRINT_FORWARD
+ACTUAL
+ADD_ACT 5
+PRINT_FORWARD
+
+//current na środku
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_BEG 4
+ADD_END 5
+ADD_END 6
+PRINT_FORWARD
+ACTUAL
+ADD_ACT 7
+PRINT_FORWARD
+////////////////////////////////////////////// DEL_ACT
+//current pierwsze	// DZIAŁA
+ADD_END 1
+ADD_END 2
+ADD_END 3
+ADD_END 4
+PRINT_FORWARD
+ACTUAL
+DEL_ACT
+PRINT_FORWARD
+
+//current na środku	// DZIAŁA
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_END 4
+ADD_END 5
+PRINT_FORWARD
+ACTUAL
+DEL_ACT
+PRINT_FORWARD
+
+//current drugie	// DZIAŁA
+ADD_BEG 1
+ADD_BEG 2
+ADD_END 3
+ADD_END 4
+PRINT_FORWARD
+ACTUAL
+DEL_ACT
+PRINT_FORWARD
+
+//current ostatnie	// DZIAŁA
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_BEG 4
+PRINT_FORWARD
+ACTUAL
+DEL_ACT
+PRINT_FORWARD
+//////////////////////////////////////////// DEL_VAL (x)
+//current na środku
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_BEG 4
+ADD_END 5
+ADD_END 6
+ADD_END 7
+PRINT_FORWARD
+DEL_VAL 4
+PRINT_FORWARD
+
+ADD_BEG 1
+ADD_BEG 2
+ADD_BEG 3
+ADD_END 4
+ADD_END 5
+PRINT_FORWARD
