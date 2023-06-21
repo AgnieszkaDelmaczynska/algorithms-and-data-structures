@@ -1,0 +1,19 @@
+ADD_END 1
+ADD_END 2
+ADD_END 3
+ADD_END 4
+ADD_END 5
+PUSH 6
+PUSH 7
+PUSH 8
+PUSH 9
+PUSH 10
+ADD_BEG 4
+ADD_BEG 3
+ADD_END 2
+ADD_END 1
+PRINT_FORWARD
+printf("front %d\n", front->value);
+printf("back %d\n", back->value);
+printf("back_next %d\n", back_next->value);
+printf("front_prev %d\n", front_prev->value);
