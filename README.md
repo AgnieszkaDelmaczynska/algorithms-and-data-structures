@@ -13,6 +13,6 @@ In this repo you will find my implementations of three projects in the field of 
 
 Some of the topics covered:
 
-- efficiently storing files on pendrives,
-- XOR linked list,
-- list-based FIFO queue.
+- Project1: efficiently storing files on pendrives,
+- Project2: XOR linked list,
+- Project3: list-based FIFO queue.
