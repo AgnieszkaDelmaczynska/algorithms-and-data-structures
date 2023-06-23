@@ -1,0 +1,31 @@
+Rzędy liczb
+Rzędem wielkości liczby dziesiętnej oznaczamy liczbę jej cyfr znaczących. Proszę napisać program który będzie grupował zadany zestaw liczb wg ich rzędów wielkości. Kolejno drukowane będą liczby należące do coraz to większych rzędów. Najpierw liczby z przedziału [1,9] następnie [10,99] i tak dalej. Liczby charakteryzujące sie tym samym rzędem wielkości będą drukowane w kolejności pojawienia sie w tablicy.
+------------------------------------------------------------------------------------------------------------------------ The order of magnitude of a decimal number means the number of its significant digits. Please write a program that will group a given set of numbers by their order of magnitude: https://en.wikipedia.org/wiki/Order_of_magnitude.
+------------------------------------------------------------------------------------------------------------------------
+Wejście
+W pierwszym wierszu pojawi się liczba przypadków testowych t. W kolejnych t wierszach każdy z nich zawiera na początku liczbę n informującą ile kolejnych liczb dotyczy danego przypadku. Kolejno pojawiające sie n_i-te liczby liczb będą z zakresu 0 < n_i < 18446744073709551616 (2^64-1).
+Wyjście
+t wierszy, każdy zawierający liczby pogrupowane rosnącymi rzędami wielkości.
+------------------------------------------------------------------------------------------------------------------------
+Input
+The first row will contain number of t test cases. In the following t lines, each line first contains the number n that indicates how many consecutive numbers in a given case. The following n_i -numbers will be in the range 0 < n_i < 18446744073709551616 (2^64-1).
+Output
+t rows, each containing numbers grouped in increasing orders of magnitude.
+------------------------------------------------------------------------------------------------------------------------
+Przykład/Example
+
+Wejście/Input
+
+4
+3 23 8 645
+2 18446744073709551615 3
+6 87 6 99 8 2 56
+3 12 43432432 3
+
+Wyjści/Outpute
+
+8 23 645 
+3 18446744073709551615 
+6 8 2 87 99 56 
+3 12 43432432 
+

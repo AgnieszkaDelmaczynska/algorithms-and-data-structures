@@ -1,0 +1,18 @@
+﻿  rzedy nowszy.cpp
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(8,10): warning C4477: „scanf_s”: ciąg formatu „%d” wymaga argumentu typu „int *”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64 *”
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(8,10): message : rozważ użycie elementu „%lld” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(8,10): message : rozważ użycie elementu „%Id” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(8,10): message : rozważ użycie elementu „%I64d” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(17,11): warning C4477: „scanf_s”: ciąg formatu „%d” wymaga argumentu typu „int *”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64 *”
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(17,11): message : rozważ użycie elementu „%lld” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(17,11): message : rozważ użycie elementu „%Id” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(17,11): message : rozważ użycie elementu „%I64d” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(22,12): warning C4477: „scanf_s”: ciąg formatu „%d” wymaga argumentu typu „int *”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64 *”
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(22,12): message : rozważ użycie elementu „%lld” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(22,12): message : rozważ użycie elementu „%Id” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(22,12): message : rozważ użycie elementu „%I64d” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(28,11): warning C4477: „printf”: ciąg formatu „%d” wymaga argumentu typu „int”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64”
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(28,11): message : rozważ użycie elementu „%lld” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(28,11): message : rozważ użycie elementu „%Id” w ciągu formatu
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\rzedy nowszy.cpp(28,11): message : rozważ użycie elementu „%I64d” w ciągu formatu
+  AISD_Lab1.vcxproj -> C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab1\x64\Debug\AISD_Lab1.exe

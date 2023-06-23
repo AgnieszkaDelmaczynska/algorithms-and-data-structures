@@ -1,0 +1,17 @@
+
+15:06
+
+    Przedmiot
+    Treść
+    Zgłaszanie
+    Wynik
+    Kod
+
+language: polish language: english
+Użytkownik
+Strona główna
+Pomoc
+Zmiana hasła
+Wylogowanie
+Student
+Przedmioty

@@ -1,0 +1,111 @@
+Ciagi NKB
+Napisz program generujący n początkowych liczb naturalnego kodu binarnego (NKB).
+Wejście
+Wartość n
+Wyjście
+n wierszy, każdy zawiera kolejną liczbę NKB (począwszy od zera) oraz jej wartość dziesiętną oddzielone białym znakiem. Każda liczba drukowana jest na tylu bitach ile potrzebne jest do reprezentacji nawiększej z nich, jednak nie więcej niż 20. Każda liczba (oprócz zera) zawsze rozpoczyna się od najstarszej jedynki. Na pozycjach reprezentujących starsze bity zawierające zera drukowane są kropki.
+Przykład 1
+
+Wejście
+1
+
+Wyjście
+0 0
+
+Przykład 2
+
+Wejście
+2
+
+Wyjście
+0 0
+1 1
+
+Przykład 3
+
+Wejście
+3
+
+Wyjście
+.0 0
+.1 1
+10 2
+
+Przykład 4
+
+Wejście
+32
+
+Wyjście
+....0 0
+....1 1
+...10 2
+...11 3
+..100 4
+..101 5
+..110 6
+..111 7
+.1000 8
+.1001 9
+.1010 10
+.1011 11
+.1100 12
+.1101 13
+.1110 14
+.1111 15
+10000 16
+10001 17
+10010 18
+10011 19
+10100 20
+10101 21
+10110 22
+10111 23
+11000 24
+11001 25
+11010 26
+11011 27
+11100 28
+11101 29
+11110 30
+11111 31
+
+Przykład 5
+
+Wejście
+33
+
+Wyjście
+.....0 0
+.....1 1
+....10 2
+....11 3
+...100 4
+...101 5
+...110 6
+...111 7
+..1000 8
+..1001 9
+..1010 10
+..1011 11
+..1100 12
+..1101 13
+..1110 14
+..1111 15
+.10000 16
+.10001 17
+.10010 18
+.10011 19
+.10100 20
+.10101 21
+.10110 22
+.10111 23
+.11000 24
+.11001 25
+.11010 26
+.11011 27
+.11100 28
+.11101 29
+.11110 30
+.11111 31
+100000 32

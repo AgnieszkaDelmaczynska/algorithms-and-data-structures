@@ -1,0 +1,30 @@
+Konwersja z systemu dziesiętnego
+Zamień liczbę podaną w systemie dziesiętnym na równoważną w innym systemie. Program powinien działać z wykorzystaniem rekurencji.
+Wejście
+Pierwsza linia na wejściu zawiera liczbę n będącą liczbą podanych dalej par liczb X i P. Każda para składa się z X - liczby dziesiętnej będącej celem konwersji oraz 1 <= P <= 36 - oznaczającej podstawę systemu do którego będziemy dokonać konwersji liczby X.
+Wyjście
+Liczba X w systemie o podstawie P.
+Przykład
+
+Wejście
+8
+126 3
+19 2
+345436546 7
+23456100 10
+13 1
+10 11
+123456789 25
+35 36
+
+Wyjście
+
+11200
+10011
+11363106430
+23456100
+1111111111111
+A
+CG15LE
+Z
+
