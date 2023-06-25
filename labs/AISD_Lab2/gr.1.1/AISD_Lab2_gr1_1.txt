@@ -1,0 +1,286 @@
+Operacje na drzewie binarnym 3
+-------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz H n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+H n - wypisz wysokość poddrzewa ukorzenionego w n (odległość wierzchołka n od najdalszego swojego liścia) lub "-" jeśli wierzchołek nie istnieje
+
+Example
+
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+H 5
+H 9
+H 14
+I 15
+H 14
+
+Output:
+-
+2
+0
+1
+
+
+___________________________________________________________________
+
+Operacje na drzewie binarnym 5
+-------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz O n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+O n - wypisz wierzchołki z poddrzewa ukorzenionego w n w kolejności inorder, rozdzielając je spacjami; jeśli poddrzewo nie istnieje, wypisz "-"
+
+Example
+
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+O 5
+O 9
+O 14
+I 13
+O 14
+
+Output:
+-
+4 6 7 9 14 
+14
+13 14
+________________________________________________________________
+
+Operacje na drzewie binarnym 7
+--------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz P n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+P n - wypisz wierzchołki na ścieżce od n do korzenia lub "-" jeśli wierzchołek nie istnieje
+
+Example
+
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+P 5
+P 9
+P 14
+I 13
+P 13
+
+Output:
+-
+9
+14 9
+13 14 9
+
+________________________________________________________________
+
+Operacje na drzewie binarnym 9
+------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz D n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+D n - wypisz liczbę wierchołków na ścieżce od n do korzenia lub "-" jeśli wierzchołek nie istnieje
+
+Example
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+D 5
+D 9
+D 14
+I 13
+D 13
+
+Output:
+-
+1
+2
+3
+
+_________________________________________________________________
+
+Operacje na drzewie binarnym 11
+-------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz V n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+V n - wypisz sumę wartości liści w poddrzewie ukorzenionym w n lub "-" jeśli wierzchołek nie istnieje
+
+Example
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+V 5
+V 9
+V 14
+I 13
+V 14
+
+Output:
+-
+25
+14
+13
+
+___________________________________________________________________
+
+Operacje na drzewie binarnym 13
+--------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz E n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+E n - wypisz wierzchołki z poddrzewa ukorzenionego w n w kolejności preorder, rozdzielając je spacjami; jeśli poddrzewo nie istnieje, wypisz "-"
+
+Example
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+E 5
+E 9
+E 14
+I 13
+E 14
+
+Output:
+-
+9 6 4 7 14
+14
+14 13
+
+__________________________________________________________________
+
+Operacje na drzewie binarnym 15
+----------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+Na wejście programu podana zostanie pewna ilość poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją dwa typy poleceń: I n oraz X n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+X n - wypisz maksymalny klucz w poddrzewie ukorzenionym w n lub "-" jeśli wierzchołek nie istnieje
+
+Example
+ 
+Input:
+I 9
+I 14
+I 6
+I 4
+I 7
+X 5
+X 9
+X 6
+X 4
+X 7
+I 15
+X 9
+
+Output:
+
+-
+14
+7
+4
+7
+15
+
+__________________________________________________________________
+
+Operacje na drzewie binarnym 17
+--------------------------------
+Napisz program, który wykonuje podane operacje na binarnym drzewie wyszukiwawczym
+
+Input
+Na wejście programu podana zostanie pewna liczba poleceń. Każde z poleceń składa się ze znaku i liczby rozdzielonych spacją. Istnieją następujące rodzaje poleceń: I n, N n. Poszczególne komendy zostaną rozdzielone znakiem nowej linii.
+
+Output
+Na wyjściu mają się pojawić rezultaty wczytywanych z wejścia poleceń:
+
+I n - wstaw n do drzewa lub nie rób nic, jeśli ten wyraz już jest w drzewie; nic nie drukuj; (już zrobione)
+N n - wypisz następnika wierzchołka n, jeśli następnik nie istnieje, wypisz "-"
+
+!!! Uwaga - podczas wyszukiwania następnika nie wolno korzystać z wartości przechowywanych w węzłach, tylko ze wskaźników na węzły potomnie i rodzica.
+Example
+Input:
+
+I 9
+I 14
+I 6
+I 4
+I 7
+N 5
+N 9
+N 6
+N 4
+N 7
+I 15
+N 14
+N 15
+
+Output:
+
+-
+14
+7
+6
+9
+15
+-
