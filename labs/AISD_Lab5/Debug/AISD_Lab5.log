@@ -1,0 +1,4 @@
+﻿  ONP_zad_2.cpp
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab5\AISD_Lab5\ONP_zad_2.cpp(16,7): warning C4101: "first": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab5\AISD_Lab5\ONP_zad_2.cpp(16,14): warning C4101: "second": lokalna zmienna, do której nie istnieje odwołanie
+  AISD_Lab5.vcxproj -> C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab5\AISD_Lab5\Debug\AISD_Lab5.exe

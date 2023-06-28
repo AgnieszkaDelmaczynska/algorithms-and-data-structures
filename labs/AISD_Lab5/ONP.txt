@@ -1,0 +1,95 @@
+Odwrotna notacja polska - zadanie 2
+
+Należy przepisać wyrażenia w postaci postfiksowej (ONP) na infiksową. Wykorzystano 3 operatory: N (negacja), K (koniunkcja) oraz A (alternatywa) i dwie wartości logiczne t (prawda) i f (fałsz).
+
+Input
+
+t - liczba przypadków wejściowych
+W kolejnych t liniach wyrażenia postfiksowe, bez spacji
+
+Output
+
+Kolejne wyrażenia infiksowe w osobnych liniach
+
+Example
+
+Input:
+2
+tttfKKK
+tfAN
+
+Output:
+(tK(tK(tKf)))
+(N(tAf))
+
+Odwrotna notacja polska - zadanie 4
+
+Należy obliczyć wartość wyrażenia w postaci prefiksowej (NP). Wykorzystano 3 operatory: N (negacja), K (koniunkcja) oraz A (alternatywa) i dwie wartości logiczne t (prawda) i f (fałsz).
+
+Input
+
+t - liczba przypadków wejściowych
+W kolejnych t liniach wyrażenia prefiksowe, bez spacji
+
+Output
+
+Kolejne wartości wyrażeń w osobnych liniach
+
+Example
+
+Input:
+2
+KtKtKtf
+NAtf
+
+Output:
+f
+f
+
+Odwrotna notacja polska - zadanie 6
+
+Należy przepisać wyrażenia w postaci prefiksowej (NP) na postfiksową (ONP). Wykorzystano 3 operatory: N (negacja), K (koniunkcja) oraz A (alternatywa) i dwie wartości logiczne t (prawda) i f (fałsz).
+
+Input
+
+t - liczba przypadków wejściowych
+W kolejnych t liniach wyrażenia prefiksowe, bez spacji
+
+Output
+
+Kolejne wyrażenia postfiksowe w osobnych liniach
+
+Example
+
+Input:
+2
+KtKtKtf
+NAtf
+
+Output:
+tttfKKK
+tfAN
+
+Odwrotna notacja polska - zadanie 8
+
+Należy przepisać wyrażenia w postaci infiksowej na prefiksową (NP). Wykorzystano 3 operatory: N (negacja), K (koniunkcja) oraz A (alternatywa) i dwie wartości logiczne t (prawda) i f (fałsz).
+
+Input
+
+t - liczba przypadków wejściowych
+W kolejnych t liniach wyrażenia infiksowe, w pełni onawiasowane, bez spacji
+
+Output
+
+Kolejne wyrażenia postfiksowe w osobnych liniach
+
+Example
+
+Input:
+2
+(tK(tK(tKf)))
+(N(tAf))
+
+Output:
+KtKtKtf
+NAtf
