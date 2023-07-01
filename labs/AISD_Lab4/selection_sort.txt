@@ -1,0 +1,57 @@
+Sortowanie przez wybieranie
+Zaimplementuj algorytm sortujący ciąg liczb całkowitych metodą przez wybieranie.
+
+Początkowo w skład części nieposortowanej wchodzi cały ciąg. Część posortowana zacznie się pojawiać po prawej stronie - elementy największe.
+
+W kolejnym kroku wybierany jest największy element z części nieposortowanej i zamieniany jest z ostatnim elementem części nieposortowanej co powoduje, że część posortowana powiększa się od prawej strony o jeden kosztem wielkości części nieposortowanej.
+Wejście
+Na wejściu pojawi się pewna liczba par wierszy. Każdy pierwszy wiersz z pary zawiera liczbę n spełniająca warunek: n ≤ 2000. Następny wiersz zawiera n liczb, spełniających warunek: -(2^31) ≤ l_{n} < 2^31 rozdzielonych znakiem spacji.
+Wyjście
+n-1 wierszy, każdy przedstawiający zawartość sortowanego ciągu n liczb podczas kolejnych przebiegów algorytmu.
+Przykład
+
+Wejście
+
+3
+3 2 1
+7
+7 1 0 3 7 3 -7
+11
+418 -573 1010 490 -790 974 254 918 570 695 672
+12
+1006 -649 944 531 -74 -179 -1023 226 918 -196 -746 737
+
+Wyjście
+
+1 2 3 
+1 2 3 
+
+-7 1 0 3 7 3 7 
+-7 1 0 3 3 7 7 
+-7 1 0 3 3 7 7 
+-7 1 0 3 3 7 7 
+-7 0 1 3 3 7 7 
+-7 0 1 3 3 7 7 
+
+418 -573 672 490 -790 974 254 918 570 695 1010
+418 -573 672 490 -790 695 254 918 570 974 1010 
+418 -573 672 490 -790 695 254 570 918 974 1010 
+418 -573 672 490 -790 570 254 695 918 974 1010 
+418 -573 254 490 -790 570 672 695 918 974 1010 
+418 -573 254 490 -790 570 672 695 918 974 1010 
+418 -573 254 -790 490 570 672 695 918 974 1010 
+-790 -573 254 418 490 570 672 695 918 974 1010 
+-790 -573 254 418 490 570 672 695 918 974 1010 
+-790 -573 254 418 490 570 672 695 918 974 1010 
+
+737 -649 944 531 -74 -179 -1023 226 918 -196 -746 1006
+737 -649 -746 531 -74 -179 -1023 226 918 -196 944 1006 
+737 -649 -746 531 -74 -179 -1023 226 -196 918 944 1006 
+-196 -649 -746 531 -74 -179 -1023 226 737 918 944 1006 
+-196 -649 -746 226 -74 -179 -1023 531 737 918 944 1006 
+-196 -649 -746 -1023 -74 -179 226 531 737 918 944 1006 
+-196 -649 -746 -1023 -179 -74 226 531 737 918 944 1006 
+-196 -649 -746 -1023 -179 -74 226 531 737 918 944 1006 
+-1023 -649 -746 -196 -179 -74 226 531 737 918 944 1006 
+-1023 -746 -649 -196 -179 -74 226 531 737 918 944 1006 
+-1023 -746 -649 -196 -179 -74 226 531 737 918 944 1006
