@@ -1,7 +1,0 @@
-﻿  budowanie_kopca.cpp
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(56,46): error C2440: "inicjowanie": nie można konwertować z "int *" na "int"
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(56,18): message : Brak kontekstu, w którym ta konwersja jest możliwa
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(59,26): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(61,43): error C2664: „void build_heap(int [],int)”: nie można dokonać konwersji argumentu 1 z „int” do „int []”
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(61,20): message : Konwersja z typu całkowitego na typ wskaźnika wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
-C:\Users\Agnieszka\Dropbox\Mój komputer (LAPTOP-4NBHCINC)\Documents\studia\sem 2\AISD\AISD_Lab4\AISD_Lab4\budowanie_kopca.cpp(26,6): message : zobacz deklarację „build_heap”
