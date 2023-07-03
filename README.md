@@ -3,7 +3,7 @@ Project as part of Algorithms and Data Structures course
 
 ## Languages
 
-Code mostly n C++
+Code mostly in C++
 
 ## Content
 
