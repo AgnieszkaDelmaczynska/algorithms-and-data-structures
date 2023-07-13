@@ -29,3 +29,21 @@ lab1:
 - Rows of numbers,
 - NKB strings,
 - Variations 2 elements in n element set.
+
+lab2:
+
+- Binary tree operations.
+
+lab3:
+
+- FIFO queue in circular list.
+
+lab4:
+
+- Selection Sort Reporting,
+- Shell Sorting Reporting,
+- Building a heap.
+
+lab5:
+
+- Reverse Polish Notation.
